@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Penghitung Jarak Overworld & Nether</title>
+    <noscript>Browser kamu tidak mendukung javascript. Silakan update atau ganti browser:v</noscript>
+    <style type="text/css" media="all">
+    .ovw {
+        background-image: url("dirt.png");
+        border: 2px solid Black;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+    }
+    .ntw {
+        background-image: url("netherrack.png");
+        border: 2px solid Black;
+        border-radius: 10px;
+        padding: 5px;
+        color: white;
+    }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+    
+      function myNumber(type){
+        if(type == 1){
+          let x = number1.value;
+          let y = number2.value;
+          let z = number3.value;
+          x = Math.floor(x/8);
+          y = (y*1);
+          z = Math.floor(z/8);
+          number4.value = x;
+          number5.value = y;
+          number6.value = z;
+        }
+        else if(type == 2){
+          let x = number4.value;
+          let y = number5.value;
+          let z = number6.value;
+          x = x*8;
+          y = y*1;
+          z = z*8;
+          number1.value = x;
+          number2.value = y;
+          number3.value = z;
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <h1>Penghitung Jarak Koordinat Overworld & Nether</h1><br>
+    <h5><span style="border: 2px solid Lime; background-color: Lime; border-radius: 12px; padding: 2px;">8 Block Di Overworld Sama Dengan <span style="border: 2px solid Purple; background-color: Purple; border-radius: 12px; padding: 2px;">1 Block Di Nether</span></span></h5><br>
+    <div class="ovw">
+      X : <input type="number" id="number1" onkeyup="myNumber(1)" placeholder="Ex : 8"><br>
+      Y : <input type="number" id="number2" onkeyup="myNumber(1)"><br>
+      Z : <input type="number" id="number3" onkeyup="myNumber(1)">
+    </div>
+    <br>
+    <div class="ntw">
+      X : <input type="number" id="number4" onkeyup="myNumber(2)"><br>
+      Y : <input type="number" id="number5" onkeyup="myNumber(2)"><br>
+      Z : <input type="number" id="number6" onkeyup="myNumber(2)">
+    </div>
+    <br>
+    <h2>Note : 97% Akurat</h2>
+  </body>
+</html>
